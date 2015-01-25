@@ -10,7 +10,6 @@ trait Context
 // Where the dependency injection occurs
 trait MyContext extends Context {
   this: Config =>
-
   def welcome = this.text
 }
 
@@ -26,5 +25,3 @@ case class InMemoryConfig() extends Config {
 }
 
 object Env extends InMemoryConfig with MyContext
-
-
