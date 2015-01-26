@@ -3,12 +3,10 @@ package com.ninetynineproblems
 import org.scalatest.{Matchers, WordSpec}
 
 /*
-
  http://aperiodic.net/phil/scala/s-99/
 
  Find the last element of a list.
   scala> last(List(1, 1, 2, 3, 5, 8))
-
 */
 
 class Problem1Spec extends WordSpec with Matchers {
