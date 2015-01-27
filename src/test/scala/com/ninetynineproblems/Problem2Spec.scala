@@ -17,7 +17,6 @@ class Problem2Spec extends WordSpec with Matchers {
       val l = List(1, 1, 2, 3, 5, 8)
       Problem2.sol1_tailRecursive(l) should equal(5)
       Problem2.sol2_chainedCalls(l) should equal(5)
-      Problem2.sol3_folding(l) should equal(5)
     }
   }
 }
