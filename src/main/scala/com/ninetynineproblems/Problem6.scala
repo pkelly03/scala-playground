@@ -1,6 +1,6 @@
 package com.ninetynineproblems
 
-object Problem5 {
+object Problem6 {
 
   def sol1_tailRecursive[T](list: List[T]): List[T] = {
 

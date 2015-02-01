@@ -5,17 +5,17 @@ import org.scalatest.{Matchers, WordSpec}
 /*
  http://aperiodic.net/phil/scala/s-99/
 
- Reverse a list.
+Find out whether a list is a palindrome.
 Example:
-scala> reverse(List(1, 1, 2, 3, 5, 8))
-res0: List[Int] = List(8, 5, 3, 2, 1, 1)
+scala> isPalindrome(List(1, 2, 3, 2, 1))
+res0: Boolean = true
 
 
 */
 
-class Problem5Spec extends WordSpec with Matchers {
-  "Exercise 5" should {
-    "Reverse a list" in {
+class Problem6Spec extends WordSpec with Matchers {
+  "Exercise 6" should {
+    "Determine if a list is a palindrome" in {
       val l = List(1,1,2,3,5,8)
       Problem5.sol1_tailRecursive(l) should be(List(8,5,3,2,1,1))
       Problem5.sol2_predefined(l) should be(List(8,5,3,2,1,1))
