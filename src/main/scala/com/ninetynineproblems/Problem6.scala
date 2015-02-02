@@ -2,21 +2,19 @@ package com.ninetynineproblems
 
 object Problem6 {
 
-  def sol1_tailRecursive[T](list: List[T]): List[T] = {
+  def sol1_tailRecursive[T](list: List[T]): Boolean = {
 
     @annotation.tailrec
     def sol1_tail(reverseList: List[T], list: List[T]): List[T] = list match {
       case h :: t => sol1_tail(h :: reverseList, t)
       case _ => reverseList
     }
-    sol1_tail(List(), list)
+    val reversedList = sol1_tail(List(), list)
+    reversedList == list
   }
 
 //  // Using list api
-  def sol2_predefined[T](list: List[T]): List[T] = list.reverse
-//
-  // using fold
-  def sol3_fold[T](list: List[T]): List[T] = list.foldLeft(List[T]())((c, el) => el :: c)
+  def sol2_predefined[T](list: List[T]): Boolean = list.reverse == list
 }
 
 
